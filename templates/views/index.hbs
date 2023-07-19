@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+   {{>header}}
+   </head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="Images/frontImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Every new friend is a <br> new adventure</span>
+          <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+      <div class="back">
+        <img class="backImg" src="Images/backImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          {{!-- login-form --}}
+          <div class="login-form">
+            <div class="title">Login</div>
+          <form action="/login" method="POST">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i> 
+                <input type="email" placeholder="Enter your email" required name="email" >
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" required name="password" >
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Sign in">
+              </div>
+              <label class="text"> <input type="checkbox" value="remember-me"> Remember me</label>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
+            </div>
+        </form>
+      </div>
+            {{!-- signup-form --}}
+        <div class="signup-form">
+          <div class="title">Signup</div>
+        <form action="/register" method="POST"> 
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Enter your name" name="name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter your email" name="email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-phone"></i>
+                <input type="text" minlength="10" maxlength="10" placeholder="Enter your Phone no" name="phone" required>
+              </div>
+               <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Enter your age" name="age" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" name="password" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Conform Password" name="confirmpassword" required>
+              </div>
+             
+              
+              <div class="button input-box">
+                <input type="submit" value="Register">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
